@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            transition: all .4s;
+        }
+        
+        div:hover {
+            /* 1.写1不会有变化，如果只写一个参数，代表xy都是这个参数
+            2.写0.5代表，把元素缩小
+            3.可以通过transform来更改缩放的中心点，模式在中间，并且
+              缩放不影响其他盒子 */
+            transform: scale(2, 2);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

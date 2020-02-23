@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 0.定义动画 */
+        
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(1000px);
+            }
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* 1.动画名字(必须写) */
+            animation-name: move;
+            /* 2.规定动画时间 ，默认是0（必须写）*/
+            animation-duration: 1s;
+            /* 3.规定动画速度曲线，默认是ease */
+            animation-timing-function: ease-in-out;
+            /* 4.规定动画从什么时候开始,默认是0 */
+            animation-delay: 1s;
+            /* 5.规定动画播放的次数，默认是1，(重复：infinite) */
+            animation-iteration-count: 3;
+            /* 6.规定动画是否逆向播放，默认是normal，逆向是alternate */
+            animation-direction: alternate;
+            /* 7.规定动画是否正在运行或暂停，默认是running，paused */
+            animation-play-state: running;
+            /* 8.动画结束后是保持，还是恢复原状态。保持forwards，回到起始backwards */
+            animation-fill-mode: forwards;
+            /* 动画的简写形式：名字，时间，运动曲线，什么时候开始，
+            播放次数，是否反向，结束状态 */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
