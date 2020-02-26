@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* 透视 */
+            perspective: 2000px;
+        }
+        
+        @keyframes rotate {
+            /* 动画沿着y轴旋转，从0到360度 */
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+        
+        section {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 150px auto;
+            /* 要让div能呈现3d效果，要让父盒子开始3d空间 */
+            transform-style: preserve-3d;
+            /* 动画：名字，持续时间，动画曲线，是否持续播放 */
+            animation: rotate 10s linear infinite;
+            background: url(img/pig.jpg) no-repeat;
+        }
+        
+        section:hover {
+            /* 动画暂停 */
+            animation-play-state: paused;
+        }
+        
+        section div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(img/dog.jpg) no-repeat;
+        }
+        
+        section div:nth-child(1) {
+            /* 盒子沿着y轴旋转的角度以及距离z轴的距离，以下同理 */
+            transform: rotateY(0deg) translateZ(500px);
+        }
+        
+        section div:nth-child(2) {
+            transform: rotateY(60deg) translateZ(500px);
+        }
+        
+        section div:nth-child(3) {
+            transform: rotateY(120deg) translateZ(500px);
+        }
+        
+        section div:nth-child(4) {
+            transform: rotateY(180deg) translateZ(500px);
+        }
+        
+        section div:nth-child(5) {
+            transform: rotateY(240deg) translateZ(500px);
+        }
+        
+        section div:nth-child(6) {
+            transform: rotateY(300deg) translateZ(500px);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+
+</html>
