@@ -1,0 +1,169 @@
+/* 给body 定义100%宽度，并且给最大值和最小值  */
+
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    font-family: -apple-system, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+.app {
+    height: 45px;
+}
+
+.app ul li {
+    float: left;
+    height: 45px;
+    background-color: #333;
+    text-align: center;
+    line-height: 45px;
+    color: #ccc;
+}
+
+.app ul li:nth-child(1) {
+    width: 8%;
+}
+
+.app ul li:nth-child(2) {
+    width: 10%;
+}
+
+.app ul li:nth-child(3) {
+    width: 57%;
+}
+
+.app ul li:nth-child(4) {
+    width: 25%;
+    background-color: #F63515;
+}
+
+.app ul li:nth-child(1) img {
+    width: 10px;
+    height: 10px;
+}
+
+.app ul li:nth-child(2) img {
+    width: 30px;
+    height: 30px;
+    /* 如果不加这句，图片偏上，因为图片默认和文字的基线对其 */
+    vertical-align: middle;
+}
+
+.search-wrap {
+    /* 固定定位的盒子一定要有宽度 */
+    position: fixed;
+    width: 100%;
+    height: 44px;
+    overflow: hidden;
+    min-width: 320px;
+    max-width: 620px;
+}
+
+.search-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 44px;
+}
+
+.search-btn::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 18px;
+    background: url(../images/s-btn.png) no-repeat;
+    background-size: 20px 18px;
+    margin: 14px 0 0 15px;
+}
+
+.search-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+    text-align: center;
+}
+
+.search {
+    position: relative;
+    height: 30px;
+    margin: 0 50px;
+    margin-top: 7px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.jd-icon {
+    position: absolute;
+    top: 8px;
+    left: 13px;
+    width: 20px;
+    height: 15px;
+    background: url(../images/jd.png) no-repeat;
+    background-size: 20px 15px;
+}
+
+.jd-icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -8px;
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+}
+
+.sou {
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    width: 18px;
+    height: 15px;
+    /* 精灵图二倍图，先把精灵图缩放为原来的二倍
+    测量出图标位置，
+    再在css里缩小图片 */
+    background: url(../images/jd-sprites.png) no-repeat -81px 0;
+    background-size: 200px auto;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.brand {
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.brand div {
+    float: left;
+    width: 33.33%;
+}
+
+.brand div img {
+    width: 100%;
+}
+
+nav a {
+    float: left;
+    width: 20%;
+}

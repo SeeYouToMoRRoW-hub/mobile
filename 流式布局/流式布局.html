@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 流式布局的整体思路是，不给具体的宽度，只给百分比宽度，但是要给盒子最大宽度和最小宽度 */
+        
+        section {
+            width: 100%;
+        }
+        
+        section div:nth-child(1) {
+            float: left;
+            width: 50%;
+            height: 200px;
+            background-color: pink;
+        }
+        
+        section div:nth-child(2) {
+            float: left;
+            width: 50%;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+
+</html>
