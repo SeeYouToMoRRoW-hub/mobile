@@ -18,7 +18,7 @@ ul {
 }
 
 img {
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .app {
@@ -166,4 +166,38 @@ img {
 nav a {
     float: left;
     width: 20%;
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+}
+
+nav a img {
+    width: 40px;
+    margin: 10px 0;
+}
+
+nav a span {
+    display: block;
+}
+
+.news {
+    margin-top: 20px;
+}
+
+.news a {
+    box-sizing: border-box;
+    float: left;
+}
+
+.news a:nth-child(1) {
+    width: 50%;
+}
+
+.news a:nth-child(n+2) {
+    width: 25%;
+    border-left: 1px solid #ccc;
+}
+
+.news img {
+    width: 100%;
 }
