@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 600px;
+            height: 400px;
+            background-color: pink;
+            /* wrap 是换行 */
+            flex-wrap: wrap;
+            /* 当出现多行的时候侧轴子元素排列方式，切记必须多行，单行没用 */
+            /* 从上至下一次排列 
+            align-content: flex-start; */
+            /* 从尾部开始 排列 
+            align-content: flex-end; */
+            /* 在侧轴中间排列 */
+            /* align-content: center; */
+            /* 子项在侧轴平分剩余空间 */
+            /* align-content: space-around; */
+            /* 子项在侧轴先分布两头，在平分剩下空间 */
+            /* align-content: space-between; */
+            /* 设置子元素高度平分父元素高度 子元素不能有高度 */
+            align-content: stretch;
+        }
+        
+        div span {
+            width: 150px;
+            /* 当使用拉伸的时候，不能设置高度，否则不生效 */
+            /* height: 100px; */
+            background-color: skyblue;
+            color: white;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+    </div>
+</body>
+
+</html>
