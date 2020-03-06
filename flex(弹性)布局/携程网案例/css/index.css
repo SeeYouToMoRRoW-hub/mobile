@@ -1,0 +1,28 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    color: #000;
+    background: #f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* 搜索模块 */
+
+.search-index {
+    /* 固定定位和父亲没关系，以屏幕为准，必须有宽度，所以要限制他的最高宽度
+    和最低宽度，以免铺满整个屏幕 */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    min-width: 320px;
+    max-width: 540px;
+    height: 44px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    background-color: pink;
+}

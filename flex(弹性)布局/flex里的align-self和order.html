@@ -9,16 +9,25 @@
         div {
             display: flex;
             width: 800px;
-            height: 400px;
+            height: 300px;
             background-color: pink;
-            /* flex-flow属性是把主轴方向和是否换行或列进行合写 */
-            flex-flow: column wrap;
         }
         
         div span {
             width: 200px;
             height: 100px;
             background-color: skyblue;
+        }
+        
+        div span:nth-child(3) {
+            /* 让子元素自己排列 */
+            align-self: flex-end;
+        }
+        
+        div span:nth-child(2) {
+            /* 定义项目的排列顺序 */
+            /* 默认是0 */
+            order: -1;
         }
     </style>
 </head>
@@ -28,8 +37,6 @@
         <span>1</span>
         <span>2</span>
         <span>3</span>
-        <span>4</span>
-        <span>5</span>
     </div>
 </body>
 
