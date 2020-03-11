@@ -9,10 +9,26 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 
 /* 搜索模块 */
 
 .search-index {
+    display: flex;
     /* 固定定位和父亲没关系，以屏幕为准，必须有宽度，所以要限制他的最高宽度
     和最低宽度，以免铺满整个屏幕 */
     position: fixed;
@@ -24,5 +40,210 @@ body {
     height: 44px;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
+    background-color: #F6F6F6;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.search {
+    position: relative;
+    flex: 1;
+    height: 26px;
+    line-height: 24px;
+    border: 1px solid #ccc;
+    margin: 7px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #666;
+    padding-left: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.search::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/sprite.png) no-repeat -59px -279px;
+    background-size: 104px auto;
+}
+
+.user {
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
+    text-align: center;
+    color: #2eaae0;
+}
+
+.user::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../images/sprite.png) no-repeat -59px -194px;
+    background-size: 104px auto;
+    margin: 4px auto -2px;
+}
+
+
+/* 焦点图 */
+
+.focus {
+    margin-top: 44px;
+}
+
+.focus img {
+    width: 100%;
+}
+
+
+/* 局部导航栏 */
+
+.local_nav {
+    display: flex;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 3px 4px;
+}
+
+.local_nav li {
+    flex: 1;
+}
+
+.local_nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+
+.local_nav li [class^="local_nav_icon"] {
+    width: 32px;
+    height: 32px;
     background-color: pink;
+    margin-top: 8px;
+    background: url(../images/localnav_bg.png) no-repeat 0 0;
+    background-size: 32px auto;
+}
+
+.local_nav li .local_nav_icon_icon2 {
+    background-position: 0 -32px;
+}
+
+.local_nav li .local_nav_icon_icon3 {
+    background-position: 0 -64px;
+}
+
+.local_nav li .local_nav_icon_icon4 {
+    background-position: 0 -96px;
+}
+
+.local_nav li .local_nav_icon_icon5 {
+    background-position: 0 -128px;
+}
+
+
+/* 主导航栏 */
+
+nav {
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 4px 3px;
+}
+
+.nav-common {
+    display: flex;
+    height: 88px;
+    background-color: skyblue;
+}
+
+.nav-common:nth-child(1) {
+    /* 背景颜色的线性渐变，必须加私有前缀 */
+    background: -webkit-linear-gradient(left, #FA5A55, #FA994D);
+}
+
+.nav-common:nth-child(2) {
+    margin: 3px 0;
+    background: -webkit-linear-gradient(left, #4B90ED, #53BCED);
+}
+
+.nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, #34C2A9, #6CD559);
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item a {
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    font-size: 14px;
+    text-shadow: 1px 1px rgba(0, 0, 0, .2);
+}
+
+.nav-item a:nth-child(1) {
+    border-bottom: 1px solid #fff;
+}
+
+.nav-item:nth-child(1) a {
+    border: 0;
+    background: url(../images/hotel.png) no-repeat bottom center;
+    background-size: 121px auto;
+}
+
+.nav-item:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+}
+
+
+/* 侧导航栏 */
+
+.subunav-entry {
+    display: flex;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 4px;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+.subunav-entry li {
+    /* flex里除了写数字 也可以写百分比 */
+    flex: 20%;
+}
+
+.subunav-entry a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subunav-entry li [class^="subunav-entry-icon"] {
+    width: 28px;
+    height: 28px;
+    background-color: pink;
+    margin-top: 4px;
+    background: url(../images/subnav-bg.png) no-repeat;
+    background-size: 28px auto;
+}
+
+.subunav-entry li .subunav-entry-icon-icon2 {
+    background-position: 0 -29px;
+}
+
+.subunav-entry li .subunav-entry-icon-icon3 {
+    background-position: 0 -61px;
+}
+
+.subunav-entry li .subunav-entry-icon-icon4 {
+    background-position: 0 -161px;
 }
